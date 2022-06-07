@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --DarkBlue2: hsla(213, 19%, 18%,.7);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --boxBackground: #1a212b;
+    --Orange: hsl(25, 97%, 53%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,5 +18,76 @@
 }
 
 body {
-    background-color: #141519;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--VeryDarkBlue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card {
+    width: 425px;
+    height: 410px;
+    padding: 30px;
+    background-color: var(--boxBackground);
+    border-radius: 25px;
+}
+
+.card .star {    
+    margin: 10px 0 0 8px;
+    background-color: var(--DarkBlue2);
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.card .star .star-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card .title {
+    font-size: 28px;
+    margin-top: 30px;
+    color: var(--White);
+    font-weight: 400;
+}
+.card .paragraph {
+    margin-top: 11px;
+    color: var(--MediumGrey);
+    line-height: 1.5;
+}
+
+.card .numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card .numbers li {
+    width: 50px;
+    height: 50px;
+    background-color: var(--DarkBlue2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--MediumGrey);
+}
+
+.card .btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    margin-top: 30px;
+    background-color: var(--Orange);
+    color: #dadada;
+    font-weight: 400;
+    letter-spacing: 3px;
 }
