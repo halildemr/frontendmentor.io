@@ -30,12 +30,27 @@ body {
     width: 270px;
 }
 
-.card .card-img {
-    width: 270px;
-    margin: 0 auto; /* top/bottom left/right */
-    border-radius: 6px;
+.card .img-div  {
+    width: auto;
+    height: 274px;
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
 }
 
+
+
+.card .img-div::before {
+    content: '';
+    position: absolute;
+    width: 270px;
+    height: 274px;
+    border-radius: 10px;
+    top:0; left:0;
+    z-index: 100000;
+    
+}
 .card .title {
     font-weight: 600;
     color:var(--White);
@@ -97,4 +112,17 @@ body {
 }
 .card .user p span {
     color: var(--White);
+}
+
+
+.img-div:hover::before {
+    background-color: hsla(178, 100%, 50%,0.5);
+}
+
+.card .title:hover {
+    color: var(--Cyan);
+}
+
+.card .user p span:hover {
+    color: var(--Cyan);
 }
