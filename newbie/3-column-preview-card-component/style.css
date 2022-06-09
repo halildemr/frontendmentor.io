@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/*  font-family: 'Lexend Deca', sans-serif; */ 
+/*  font-family: 'Big Shoulders Display', cursive;  */
+
+
+:root {
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75); /* paragraphs*/
+    --Verylightgray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+body {
+    font-size: 15px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--Verylightgray);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container .car1,
+.container .car2,
+.container .car3 {
+    width: 210px;
+    height: 450px;
+    padding: 50px 55px 0 50px;
+}
+
+.container .car1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.container .car3 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.container .car1 .car1-title,
+.container .car2 .car2-title,
+.container .car3 .car3-title {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Verylightgray);
+    font-size: 45px;
+}
+
+.container .car1 {
+    background-color: var(--Brightorange);
+    
+}
+.container .car2 {
+    background-color: var(--Darkcyan);
+    
+}
+.container .car3 {
+    background-color: var(--Verydarkcyan);
+    
+}
+.container .car1 .car1-circle,
+.container .car2 .car2-circle,
+.container .car3 .car3-circle {
+    width: 55px;
+}
+
+
+.container .car1 .car1-paragraph,
+.container .car2 .car2-paragraph,
+.container .car3 .car3-paragraph {
+    color: var(--Transparentwhite);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.container .car1 .car1-btn,
+.container .car2 .car2-btn,
+.container .car3 .car3-btn {
+    width: 150px;
+    height: 45px;
+    border-radius: 22px;
+    border: none;
+    background-color: var(--Verylightgray);
+    color: var(--Brightorange);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+.container .car1 .car1-btn {
+    color: var(--Brightorange);
+}
+
+.container .car2 .car2-btn {
+    color: var(--Darkcyan);
+}
+
+.container .car3 .car3-btn {
+    color: var(--Verydarkcyan);
+}
