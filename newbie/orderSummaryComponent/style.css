@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+    --Paleblue2: hsla(225, 100%, 94%,0.3);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-color: var(--Paleblue);
+    position: relative;
+    width: 1440px;
+    height: 100vh;
+    margin: 0 auto ;
+}
+
+.component {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    height: 680px;
+    background-color: var(--Verypaleblue);
+    border-radius: 20px;
+}
+.component .illustration-hero {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.component .title {
+    color: var(--Darkblue);
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+    margin-top: 35px;
+}
+
+.component .paragraph {
+    color: var(--Desaturatedblue);
+    margin: 25px 45px 0 45px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.component .information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Paleblue2);
+    margin: 18px 38px 0 38px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.component .information .icon-price {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.component .information .icon-price .price span {
+    display: block;
+}
+
+.component .icon-price .price {
+    margin-left: 15px;
+}
+
+
+.component .information .icon-price .price-name {
+    color: var(--Darkblue);
+    font-weight: 900;
+}
+.component .information .icon-price .price-year {
+    margin-top: 5px;
+    color: var(--Desaturatedblue);
+}
+
+.component .information a:link {
+    color: var(--Brightblue);
+}
+
+.component .payment-button {
+    display: block;
+    margin: 32px auto 0 auto;
+    width: 374px;
+    height: 50px;
+    background-color: var(--Brightblue);
+    border-radius: 10px;
+    border: 1px solid var(--Darkblue);
+    color: var(--Verypaleblue);
+    font-weight: 700;
+    box-shadow: 0px 15px 30px hsla(245, 75%, 52%,0.4);
+    cursor: pointer;
+}
+
+.component .cansel-order {
+    display: block;
+    border: none;
+    background-color: transparent;
+    margin: 32px auto 0 auto;
+    color: var(--Desaturatedblue);
+    font-weight: 900;
+    cursor: pointer;
+}
