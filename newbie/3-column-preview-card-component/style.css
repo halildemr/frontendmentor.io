@@ -107,3 +107,27 @@ body {
 .container .car3 .car3-btn {
     color: var(--Verydarkcyan);
 }
+
+
+
+.container .car1 .car1-btn:hover {
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    color: var(--Verylightgray);
+    font-weight: 400;
+}
+.container .car2 .car2-btn:hover {
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    color: var(--Verylightgray);
+    font-weight: 400;
+}
+.container .car3 .car3-btn:hover {
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    color: var(--Verylightgray);
+    font-weight: 400;
+}
