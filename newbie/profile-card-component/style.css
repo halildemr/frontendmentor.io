@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+    --Darkgray: hsl(0, 0%, 59%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--Darkcyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: url(images/bg-pattern-top.svg);
+    position: absolute;
+    top: calc(-987px / 2);
+    left: -250px;
+}
+
+.container::after {
+    content: url(images/bg-pattern-top.svg);
+    position: absolute;
+    bottom: calc(-987px + 400px);
+    right: -250px;
+}
+
+.container .card {
+    position: relative;
+    z-index: 10;
+    width: max-content;
+    height: 385px;
+    background-color: white;
+    border-radius: 14px;
+}
+.container .card .card-top img {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.container .card .card-central {
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    border-bottom: 0.8px solid hsla(0, 0%, 59%,0.2);;
+}
+
+.container .card .card-central img{
+    border-radius: 50%;
+    outline: 5px solid white;
+    position: absolute;
+    left: 50%;
+    top: -48px;
+    transform: translate(-50%);
+}
+
+.container .card .card-central .name {
+    text-align: center;
+    color: var(--Verydarkdesaturatedblue);
+    font-size: 18px;
+}
+
+.container .card .card-central .name span {
+    font-weight: 400;
+    color: var(--Darkgrayishblue);
+    font-size: 16px;
+}
+
+.container .card .card-central .city {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: var(--Darkgrayishblue);
+    margin-top: 8px;
+}
+
+.container .card .card-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px;
+}
+
+.container .card .card-bottom span{
+    display: block;
+    text-align: center;
+}
+
+.container .card .card-bottom .spn1  {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container .card .card-bottom .spn2 {
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    color: var(--Darkgrayishblue);
+}
