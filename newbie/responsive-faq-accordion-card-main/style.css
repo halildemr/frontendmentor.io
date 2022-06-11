@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+:root {
+    --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --Softred:                 hsl(14,  88%, 65%);
+    --Softviolet:              hsl(273, 75%, 66%);
+    --Softblue:                hsl(240, 73%, 65%);
+    --Verydarkgrayishblue:     hsl(237, 12%, 33%);
+    --Darkgrayishblue:         hsl(240, 6%,  50%);
+    --Lightgrayishblue:        hsl(240, 5%,  91%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--Softviolet), var(--Softblue));
+}
+
+.container {
+    width: 1050px;
+    height: 550px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+}
+
+.container .left,
+.container .right {
+    height: 550px;
+    width: 525px;
+    
+}
+
+.container .left {
+    position: relative;
+    background-image:  url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: -75px, -590px;
+    background-position-y:  80px, -290px;
+}
+
+.container .left .img-box {
+    position: absolute;
+    top: 56%;
+    left: -25%;
+    transform: translate(0,-50%);
+}
+.container .left .img-woman {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container .right {
+    padding: 70px 65px 0 30px;
+    /* background-color: yellow; */
+}
+
+.row1, .row1-1, .row3, .row4, .row5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.row1, .row2, .row3, .row4, .row5 {
+    border-bottom: 1px solid var(--Lightgrayishblue);
+    padding-bottom: 17px;
+    padding-top: 17px;
+}
+
+.container .right .faq {
+    color: var(--Verydarkdesaturatedblue);
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.container .right .text {
+    color: var(--Darkgrayishblue);
+}
+
+.container .right .row2 .information {
+    color: var(--Darkgrayishblue);
+    padding-top: 15px;
+
+}
+
+.container .right img {
+    height: 10px;
+}
+
+.container .right .row2 .row1-1 img {
+    transform: rotate(180deg);
+}
+
+.container .right .row2 .row1-1 .text {
+    color: var(--Verydarkdesaturatedblue);
+    font-size: 18px;
+}
+
+.container .right .text:hover {
+    color: var(--Softred);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1050px) {
+
+    body {
+        min-width: 547px;
+        height: 100vh;
+    }
+
+    .container {
+        flex-direction: column;
+
+        width: 425px;
+        height: 700px;
+    }
+    .container .left,
+    .container .right {
+        padding: 10px 35px;
+        width: 425px;
+    }
+
+    .container .left {
+        position: relative;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: -140px;
+    }
+    .container .right {
+        margin-bottom: 50px;
+    }
+    .container .left .img-box {
+        display: none;
+    }
+    .container .left .img-woman {
+        display: block;
+        position: absolute;
+        width: 350px;
+        top: -150px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+
+    .container .right .faq {
+        text-align: center;
+    }
+
+    .row1, .row2, .row3, .row4, .row5 {
+        padding-bottom: 22px;
+        padding-top: 22px;
+    }
+}
