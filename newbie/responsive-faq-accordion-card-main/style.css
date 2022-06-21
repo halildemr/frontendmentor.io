@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
 
 
 :root {
-    --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
-    --Softred:                 hsl(14,  88%, 65%);
-    --Softviolet:              hsl(273, 75%, 66%);
-    --Softblue:                hsl(240, 73%, 65%);
-    --Verydarkgrayishblue:     hsl(237, 12%, 33%);
-    --Darkgrayishblue:         hsl(240, 6%,  50%);
-    --Lightgrayishblue:        hsl(240, 5%,  91%);
+    --Soft-red:                   hsl(14,  88%, 65%);
+    --Soft-blue:                  hsl(240, 73%, 65%); /* gradient */
+    --Soft-violet:                hsl(273, 75%, 66%); /* gradient */
+    --Very-dark-grayish-blue:     hsl(237, 12%, 33%);
+    --Dark-grayish-blue:          hsl(240, 6%,  50%);
+    --Light-grayish-blue:         hsl(240, 5%,  91%); /* dividers */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
 }
 
 * {
@@ -17,162 +17,164 @@
     box-sizing: border-box;
 }
 
-body {
+html {
+    font-size: 62.5%;
     font-family: 'Kumbh Sans', sans-serif;
-    height: 100vh;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(var(--Softviolet), var(--Softblue));
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(var(--Soft-violet),var(--Soft-blue) );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
+
 
 .container {
-    width: 1050px;
-    height: 550px;
-    background-color: whitesmoke;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 22px;
+    background-color: white;
+    border-radius: 20px;
 }
 
-.container .left,
-.container .right {
-    height: 550px;
-    width: 525px;
+
+ /* left */
+.container .left {
+    width: 375px;
+    height: 399px;
+    background-image: url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 97%, 200%;
+    background-position: -60px, -450px -230px;
+    position: relative;
     
 }
 
-.container .left {
-    position: relative;
-    background-image:  url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
-    background-repeat: no-repeat;
-    background-position-x: -75px, -590px;
-    background-position-y:  80px, -290px;
-}
-
-.container .left .img-box {
+.container .left::before {
+    content: url(images/illustration-box-desktop.svg);
     position: absolute;
-    top: 56%;
-    left: -25%;
-    transform: translate(0,-50%);
-}
-.container .left .img-woman {
-    display: none;
+    top: 140px;
+    left: -100px;
+    z-index: 1;
 }
 
 
-
-
-
-
-
-
-
-
-
+/* right */
 .container .right {
-    padding: 70px 65px 0 30px;
-    /* background-color: yellow; */
+    width: 375px;
+    padding: 50px 90px 65px 0;
 }
 
-.row1, .row1-1, .row3, .row4, .row5 {
+.container .right .row1,
+.container .right .row3,
+.container .right .row4,
+.container .right .row5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    
-}
-.row1, .row2, .row3, .row4, .row5 {
-    border-bottom: 1px solid var(--Lightgrayishblue);
-    padding-bottom: 17px;
-    padding-top: 17px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--Light-grayish-blue);
 }
 
-.container .right .faq {
-    color: var(--Verydarkdesaturatedblue);
-    font-size: 38px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.container .right .text {
-    color: var(--Darkgrayishblue);
-}
-
-.container .right .row2 .information {
-    color: var(--Darkgrayishblue);
-    padding-top: 15px;
-
+.container .right h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 .container .right img {
-    height: 10px;
+    width: 10px;
+    height: 7px;
 }
 
-.container .right .row2 .row1-1 img {
+.container .right .row1 h3,
+.container .right .row3 h3,
+.container .right .row4 h3,
+.container .right .row5 h3 {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.container .right .row2 {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+}
+
+.container .right .row2 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .right .row2 h4 {
+    color: var(--Dark-grayish-blue);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.container .right .row2 div h3 {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.container .right .row2 div img {
     transform: rotate(180deg);
 }
 
-.container .right .row2 .row1-1 .text {
-    color: var(--Verydarkdesaturatedblue);
-    font-size: 18px;
+
+/* hover */
+.container .right h3:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
 }
 
-.container .right .text:hover {
-    color: var(--Softred);
+.container .right .row2 div h3:hover {
+    color: var(--Soft-red);
     cursor: pointer;
 }
 
 
-@media screen and (max-width: 1050px) {
 
-    body {
-        min-width: 547px;
-        height: 100vh;
-    }
 
+@media screen and (max-width: 375px) {
+    
     .container {
         flex-direction: column;
-
-        width: 425px;
-        height: 700px;
+        
     }
-    .container .left,
-    .container .right {
-        padding: 10px 35px;
-        width: 425px;
-    }
-
-    .container .left {
-        position: relative;
-        background-image: url(images/bg-pattern-desktop.svg);
-        background-size: 300px;
-        background-repeat: no-repeat;
-        background-position-x: 50%;
-        background-position-y: -140px;
-    }
-    .container .right {
-        margin-bottom: 50px;
-    }
-    .container .left .img-box {
-        display: none;
-    }
-    .container .left .img-woman {
-        display: block;
-        position: absolute;
-        width: 350px;
-        top: -150px;
-        left: 50%;
-        transform: translate(-50%,0);
-    }
-
-    .container .right .faq {
+    .container .right h1 {
         text-align: center;
     }
 
-    .row1, .row2, .row3, .row4, .row5 {
-        padding-bottom: 22px;
-        padding-top: 22px;
+    .container .left {
+        background-image: none;
+        width: 325px;
+        height: 150px;
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: top center;
+    }
+
+    .container .left::before {
+        content: url(images/illustration-woman-online-mobile.svg);
+        top: -105px;
+        left: 48px;
+        width: 70%;
+    }
+
+    .container .right {
+        width: 325px;
+        height: auto;
+        padding:  0 25px 40px 25px;
+    }
+
+    .container .right .row2 h4 {
+        font-size: 1.2rem;
     }
 }
